@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>teleop</name>
+  <version>0.0.0</version>
+  <description>Teleop package to remotely operate UAF's Husky and Jackal UGVs from a remote ground station</description>
+
+  <maintainer email="cauld@alaska.edu">Clayton Auld</maintainer>
+  <license>BSD</license>
+
+  <url type="website">http://www.northernembeddedsolutions.com></url>
+  <author email="cauld@alaska.edu">Clayton Auld</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+
+  <run_depend>rospy</run_depend>
+
+</package>
