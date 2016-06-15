@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 # Usage: teleop.py [robot name] [controller type]
 #           robot name: jackal | husky | simulation
 #           controller: gamepad | controller | keyboard | mouse
