@@ -7,4 +7,4 @@ Name[en_US]=Jackal Teleop
 Exec=rosrun teleop jackal-teleop.sh
 #Exec=/usr/bin/jackal-teleop.sh
 Name=Jackal Teleop
-Icon=/home/hatfield/Clearpath/icons/jackal.jpg
+Icon=/home/clayauld/Clearpath/catkin_ws/install/share/teleop/icons/jackal.jpg

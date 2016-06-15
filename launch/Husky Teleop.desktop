@@ -7,4 +7,4 @@ Name[en_US]=Husky Teleop
 Exec=rosrun teleop husky-teleop.sh
 #Exec=/usr/bin/husky-teleop.sh
 Name=Husky Teleop
-Icon=/home/hatfield/Clearpath/icons/husky.jpg
+Icon=/home/hatfield/Clearpath/catkin_ws/install/share/teleop/icons/husky.jpg
