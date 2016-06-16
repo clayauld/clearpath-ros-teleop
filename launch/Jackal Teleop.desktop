@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Terminal=true
-Icon[en_US]=/home/clayauld/Clearpath/catkin_ws/install/share/teleop/icons/jackal.jpg
+Icon[en_US]=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/jackal.jpg
 Name[en_US]=Jackal Teleop
 Exec=/home/hatfield/Clearpath/ROS_Packages/teleop/launch/jackal-teleop.sh
 Name=Jackal Teleop
-Icon=/home/clayauld/Clearpath/catkin_ws/install/share/teleop/icons/jackal.jpg
+Icon=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/jackal.jpg

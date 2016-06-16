@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Terminal=true
-Icon[en_US]=/home/hatfield/Clearpath/catkin_ws/install/share/teleop/icons/husky.jpg
+Icon[en_US]=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/husky.jpg
 Name[en_US]=Husky Teleop
 Exec=/home/hatfield/Clearpath/ROS_Packages/teleop/launch/husky-teleop.sh
 Name=Husky Teleop
-Icon=/home/hatfield/Clearpath/catkin_ws/install/share/teleop/icons/husky.jpg
+Icon=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/husky.jpg
