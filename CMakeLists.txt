@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-catkin_python_setup()
+#catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -137,9 +137,6 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-#add_executable(bin/husky-teleop.sh husky-teleop.sh)
-#add_executable(bin/jackal-teleop.sh jackal-teleop.sh)
-
 #############
 ## Install ##
 #############
@@ -152,14 +149,27 @@ include_directories(
 #install(PROGRAMS
 #   scripts/teleop.py
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- #)
+#)
+
+install(PROGRAMS
+   scripts/jackal-teleop.sh
+   scripts/husky-teleop.sh
+   scripts/teleop.py
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(PROGRAMS
+  "launch/Jackal Teleop.desktop"
+  "launch/Husky Teleop.desktop"
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS teleop teleop_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+#install(TARGETS jackal-teleop husky-teleop
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
@@ -170,14 +180,12 @@ include_directories(
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 #install(FILES
-#   "launch/Jackal Teleop.desktop"
-#   "launch/Husky Teleop.desktop"
-#   "scripts/husky-teleop.sh"
-#   "scripts/jackal-teleop.sh"
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
+# "launch/Jackal Teleop.desktop"
+# "launch/Husky Teleop.desktop"
+# DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
-foreach (dir launch icons)
+foreach (dir icons)
   install(DIRECTORY ${dir}/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)

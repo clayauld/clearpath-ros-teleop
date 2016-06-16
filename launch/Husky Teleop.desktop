@@ -4,6 +4,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/husky.jpg
 Name[en_US]=Husky Teleop
-Exec=/home/hatfield/Clearpath/ROS_Packages/teleop/launch/husky-teleop.sh
+Exec=/home/hatfield/Clearpath/ROS_Packages/teleop/husky-teleop.sh
 Name=Husky Teleop
 Icon=/home/hatfield/Clearpath/ROS_Packages/teleop/icons/husky.jpg
