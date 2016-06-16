@@ -1,8 +1,8 @@
 #! /bin/bash
-#source /opt/ros/indigo/setup.bash
+source /opt/ros/indigo/setup.bash
 #cd ~/Clearpath
 #python ./teleop.py Jackal
-export ROS_PACKAGE_PATH=/home/hatfield/Clearpath/catkin_ws/src:$ROS_PACKAGE_PATH
+export ROS_PACKAGE_PATH=/home/hatfield/Clearpath/ROS_Packages:$ROS_PACKAGE_PATH
 rosrun teleop teleop.py Jackal
 
 read -n1 -r -p "Press any key to exit..." key
