@@ -42,6 +42,7 @@ def getinputs():
             #except ValueError:
             #    #power = 0
     if control == None:
+        #print "HELP ME"
         control = 'Gamepad'
 
     return (robot, control) #power)
@@ -92,7 +93,7 @@ def ros_master(robot):
                 print '\nUsage: teleop.py [robot name] [controller type]\n\n\trobot name: jackal | husky | simulation\n\tcontroller: gamepad | controller | keyboard | mouse\n'#\tdrive power: Any whole number (no change when using gamepad control)\n'
                 exit()
 
-    return loc
+    return (loc, robot)
 
 def keyboard():
     pub = rospy.Publisher('/cmd_vel',Twist, queue_size=1)
@@ -135,11 +136,15 @@ def gamepad(robot):
             exit()
 
 def controller(control):
+    print control
     if control == None:
+        #print 'Help'
         gamepad(robot)
-    elif control == 'controller' or 'gamepad' or 'Gamepad' or 'contr' or 'cont':
+    elif control == 'controller' or control == 'gamepad' or control == 'Gamepad' or control == 'contr' or control == 'cont':
+        #print 'NO'
         gamepad(robot)
     elif control == 'key' or control == 'keyboard':
+        #print "YES"
         keyboard()
     elif control == 'mouse':
         exit()
@@ -192,7 +197,7 @@ if __name__ == '__main__':
         #print 'control=%s' %control
         #print 'power=%s' % power
 
-        loc = ros_master(robot)
+        loc, robot = ros_master(robot)
         #print 'Drive Power: %d' %power
         os.environ['ROS_MASTER_URI'] = loc
         print '\nConnecting to %s using %s...' %(robot, control)
