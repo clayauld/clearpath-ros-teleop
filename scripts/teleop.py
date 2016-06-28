@@ -36,7 +36,7 @@ def getinputs():
         else:
             #try:
             numb=int(arg)
-            print numb
+            #print numb
             #power = float(numb)
 
             #except ValueError:
@@ -136,7 +136,7 @@ def gamepad(robot):
             exit()
 
 def controller(control):
-    print control
+    #print control
     if control == None:
         #print 'Help'
         gamepad(robot)
